@@ -1,0 +1,53 @@
+[user]
+  name = Vincent Garrigues
+  email = vincent@garriguv.io
+
+[alias]
+  s        = status
+  c        = commit
+  p        = push
+  co       = checkout
+  cb       = checkout -b
+  ct       = checkout --track
+  rev      = rev-parse --short HEAD
+  subup    = submodule update --recursive --init
+  subclean = submodule foreach --recursive git clean -xfdf
+  subreset = submodule foreach --recursive git reset --hard
+  df       = diff
+  pr       = pull --rebase
+  puff     = pull --ff-only
+  lg       = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[branch "main"]
+  mergeoptions = --no-ff
+
+[color]
+  branch = auto
+  diff   = auto
+  status = auto
+  ui     = true
+
+[pull]
+  ff = only
+
+[push]
+  default = simple
+
+[rebase]
+  autoStash = true
+
+[remote "origin"]
+  prune = true
+
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+
+[core]
+  editor       = code --wait
+  excludesfile = ~/.gitignore
+
+[includeIf "gitdir:dance-electric/"]
+  path = .gitconfig-dance
+
+[init]
+  defaultBranch = main

@@ -19,12 +19,6 @@ function g() {
 	fi
 }
 
-# npm
-function npm-do() {
-	PATH=$(npm bin):$PATH
-	eval $@
-}
-
 # reload configuration
 function sz() {
 	source ~/.zshenv
@@ -37,23 +31,14 @@ function rmdd() {
 	echo "😭"
 }
 
-# ls
-alias l="ls -Flh"
-alias la="ls -FAlh"
-alias lsregister="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister"
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Aliases
+[ -f ~/.alias.zsh ] && source ~/.alias.zsh
 
 # Local configuration
 [ -f ~/.local.zsh ] && source ~/.local.zsh
 
 # rbenv
 eval "$(rbenv init -)"
-
-# Homebrew
-alias ibrew="arch -x86_64 /usr/local/bin/brew"
-alias mbrew="arch -arm64 /opt/homebrew/bin/brew"
-
-# ruby
-alias be="bundle exec"
