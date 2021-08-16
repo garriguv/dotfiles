@@ -39,11 +39,8 @@
 [remote "origin"]
   prune = true
 
-[url "git@github.com:"]
-  insteadOf = https://github.com/
-
 [core]
-  editor       = code --wait
+  editor       = vim
   excludesfile = ~/.gitignore
 
 [includeIf "gitdir:dance-electric/"]
