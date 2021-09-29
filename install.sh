@@ -2,6 +2,8 @@
 
 set -e
 
+chsh -s /usr/bin/zsh "$(whoami)"
+
 if [ ! "$(command -v chezmoi)" ]; then
   bin_dir="$HOME/.local/bin"
   chezmoi="$bin_dir/chezmoi"
