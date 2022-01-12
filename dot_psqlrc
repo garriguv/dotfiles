@@ -1,0 +1,17 @@
+-- Don't display the startup message
+\set QUIET 1
+
+-- One command history per database
+\set HISTFILE ~/.psql_history- :DBNAME
+
+-- No pager
+\pset pager off
+
+-- Use the best available output format
+\x auto
+
+-- Show query execution time
+\timing
+
+-- Render null values as [null]
+\pset null '[null]'
