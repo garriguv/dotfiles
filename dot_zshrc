@@ -31,9 +31,6 @@ function rmdd() {
 	echo "😭"
 }
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Aliases
 [ -f ~/.alias.zsh ] && source ~/.alias.zsh
 
@@ -42,3 +39,6 @@ function rmdd() {
 
 # rbenv
 eval "$(rbenv init -)"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
