@@ -23,6 +23,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'sheerun/vim-polyglot'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -155,3 +156,7 @@ nnoremap <F9> :Dispatch<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = "github"
 let g:lightline = { 'colorscheme': 'github' }
+
+" Insert timestamp
+nmap <F3> i<C-R>=strftime("%Y-%m-%d")<CR><Esc>
+imap <F3> <C-R>=strftime("%Y-%m-%d")<CR>
