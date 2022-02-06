@@ -5,3 +5,8 @@ alias lsregister="/System/Library/Frameworks/CoreServices.framework/Versions/A/F
 
 # ruby
 alias be="bundle exec"
+
+# Task*
+alias ta="task"
+alias ti="timew"
+
