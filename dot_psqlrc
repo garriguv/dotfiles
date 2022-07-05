@@ -15,3 +15,6 @@
 
 -- Render null values as [null]
 \pset null '[null]'
+
+-- Show footer with row count
+\pset footer on
