@@ -1,6 +1,3 @@
--- Don't display the startup message
-\set QUIET 1
-
 -- One command history per database
 \set HISTFILE ~/.psql_history- :DBNAME
 
