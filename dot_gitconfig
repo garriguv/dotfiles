@@ -16,8 +16,7 @@
   pr       = pull --rebase
   puff     = pull --ff-only
   lg       = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  fup      = "!f() { COMMIT_HASH=$(git log --oneline -n 10 | fzf | awk '{ print $1 }'); git commit --fixup=$COMMIT_HASH && git rebase --autosquash $COMMIT_HASH~; }; f"
-  fupi     = "!f() { COMMIT_HASH=$(git log --oneline -n 10 | fzf | awk '{ print $1 }'); git commit --fixup=$COMMIT_HASH && git rebase -i --autosquash $COMMIT_HASH~; }; f"
+  fup      = "!f() { COMMIT_HASH=$(git log --oneline -n 10 | fzf | awk '{ print $1 }'); git commit --fixup=$COMMIT_HASH && git rebase -i --autosquash --autostash $COMMIT_HASH~1; }; f"
 
 [branch "main"]
   mergeoptions = --no-ff
