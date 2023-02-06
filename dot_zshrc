@@ -42,3 +42,6 @@ eval "$(rbenv init -)"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# node
+export PATH="$HOME/.n/bin":$PATH
