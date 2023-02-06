@@ -43,5 +43,10 @@ eval "$(rbenv init -)"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# node
-export PATH="$HOME/.n/bin":$PATH
+# n (node version manager)
+export N_PREFIX="$HOME/.n"
+export PATH="$HOME/.n/bin:$PATH"
+
+# Go
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
