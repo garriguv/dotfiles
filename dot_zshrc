@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(ssh-agent z)
+plugins=(ssh-agent z asdf direnv)
 
 # ssh-agent configuration
 zstyle :omz:plugins:ssh-agent agent-forwarding on
@@ -37,16 +37,12 @@ function rmdd() {
 # Local configuration
 [ -f ~/.local.zsh ] && source ~/.local.zsh
 
-# rbenv
-eval "$(rbenv init -)"
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# n (node version manager)
-export N_PREFIX="$HOME/.n"
-export PATH="$HOME/.n/bin:$PATH"
 
 # Go
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+
+# atuin
+eval "$(atuin init zsh --disable-up-arrow)"

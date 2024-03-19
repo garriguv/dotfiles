@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'sheerun/vim-polyglot'
 Plug 'vimwiki/vimwiki'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -160,3 +161,12 @@ let g:lightline = { 'colorscheme': 'github' }
 " Insert timestamp
 nmap <F3> i<C-R>=strftime("%Y-%m-%d")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d")<CR>
+
+" NERDTree
+nnoremap <C-t> :NERDTreeToggleVCS<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Start NERDTree when Vim starts with a directory argument.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
