@@ -27,13 +27,12 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'cormacrelf/vim-colors-github'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-test/vim-test'
 Plug 'pangloss/vim-javascript'
 Plug 'dense-analysis/ale'
 Plug 'cormacrelf/vim-colors-github'
-Plug 'tinted-theming/base16-vim'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -222,3 +221,13 @@ augroup END
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
+
+" Standard Ruby
+let g:ale_linters = {'ruby': ['standardrb']}
+let g:ale_fixers = {'ruby': ['standardrb']}
+let g:ale_fix_on_save = 1
+
+# vim-ruby indentation
+let g:ruby_indent_assignment_style = 'variable'
+let g:ruby_indent_hanging_elements = 0
+
