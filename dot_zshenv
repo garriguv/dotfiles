@@ -1,5 +1,6 @@
 # Set default editor
-export EDITOR="code --wait"
+export EDITOR="vim"
+export VISUAL="$EDITOR"
 
 # Color ls output
 export CLICOLOR=1
